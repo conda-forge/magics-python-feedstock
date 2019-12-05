@@ -1,6 +1,6 @@
 {% set name = "magics-python" %}
 {% set pypi_name = "Magics" %}
-{% set version = "1.0.6" %}
+{% set version = "1.0.11" %}
 
 package:
   name: "{{ name|lower }}"
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ pypi_name[0] }}/{{ pypi_name }}/{{ pypi_name }}-{{ version }}.tar.gz
-  sha256: b852ddc368116f9a3a8d9e778e7d82eb2f086601c5ff3cc61e2ed2928812d498
+  sha256: c007192f4bc868350af77e83987dc7f84ef4968159e9ab30358e9df31d0b0987
 
 build:
   number: 0
