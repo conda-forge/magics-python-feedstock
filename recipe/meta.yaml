@@ -22,6 +22,9 @@ requirements:
   run:
     - numpy
     - python
+    - xarray
+    - scipy
+    - cftime
 
 test:
   commands:
