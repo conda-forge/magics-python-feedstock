@@ -11,7 +11,7 @@ source:
   sha256: c007192f4bc868350af77e83987dc7f84ef4968159e9ab30358e9df31d0b0987
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
 
@@ -22,6 +22,9 @@ requirements:
   run:
     - numpy
     - python
+    - xarray
+    - scipy
+    - cftime
 
 test:
   commands:
@@ -31,9 +34,12 @@ about:
   home: https://github.com/ecmwf/magics-python
   license: Apache 2.0
   license_family: Apache
+  license_file:
+    - PKG-INFO
   summary: Python interface to plot meteorological data in GRIB, NetCDF and BUFR.
 
 extra:
   recipe-maintainers:
     - dtip
     - StephanSiemen
+    - sylvielamythepaut
