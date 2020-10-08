@@ -5,11 +5,9 @@ Home: https://github.com/ecmwf/magics-python
 
 Package license: Apache 2.0
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/magics-python-feedstock/blob/master/LICENSE.txt)
 
 Summary: Python interface to plot meteorological data in GRIB, NetCDF and BUFR.
-
-
 
 Current build status
 ====================
