@@ -32,7 +32,7 @@ about:
   license: Apache-2.0
   license_family: Apache
   license_file:
-    - LICENSE
+    - PKG-INFO
   summary: Python interface to plot meteorological data in GRIB, NetCDF and BUFR.
 
 extra:
