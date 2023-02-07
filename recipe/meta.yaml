@@ -19,9 +19,11 @@ requirements:
   host:
     - pip
     - python >=3.6
+    - findlibs
   run:
     - numpy
     - python >=3.6
+    - findlibs
 
 test:
   commands:
