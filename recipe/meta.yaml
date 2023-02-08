@@ -11,7 +11,7 @@ source:
   sha256: 7df4241802fb552ee052da18190a5266a8faff7feecc70779cb5e1809625fb90
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv '
 
@@ -19,9 +19,11 @@ requirements:
   host:
     - pip
     - python >=3.6
+    - findlibs
   run:
     - numpy
     - python >=3.6
+    - findlibs
 
 test:
   commands:
