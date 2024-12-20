@@ -7,25 +7,27 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ pypi_name[0] }}/{{ pypi_name }}/{{ pypi_name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ pypi_name[0] }}/{{ pypi_name }}/{{ pypi_name }}-{{ version }}.tar.gz
   sha256: 7df4241802fb552ee052da18190a5266a8faff7feecc70779cb5e1809625fb90
 
 build:
-  number: 1
+  number: 2
   noarch: python
   script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv '
 
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
     - findlibs
   run:
     - numpy
-    - python >=3.6
+    - python >={{ python_min }}
     - findlibs
 
 test:
+  requires:
+    - python {{ python_min }}
   commands:
     - test -f $(python -c "import site; print(site.getsitepackages()[0])")/Magics/__init__.py  # [not win]
 
